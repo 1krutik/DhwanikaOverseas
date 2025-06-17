@@ -8,28 +8,26 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-  const response = await fetch('http://localhost:5000/api/leads', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ name, phone }),
-
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/leads`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, phone }),
     });
 
-    if (response.ok) {
-      alert('✅ Thank you! Your info has been submitted.');
-      setName('');
-      setPhone('');
-      onclose(); // Close the popup
+    if (res.ok) {
+      alert("✅ Submitted successfully!");
+      onClose();
     } else {
-      alert('❌ Submission failed. Please try again.');
+      alert("❌ Submission failed.");
     }
   } catch (error) {
-    console.error('Error submitting form:', error);
-    alert('❌ Server error. Please try again later.');
+    console.error("Submission error:", error);
+    alert("⚠️ Server error. Try again later.");
   }
 };
+
 
 
   if (!show) return null;
@@ -46,7 +44,7 @@ const handleSubmit = async (e) => {
         </button>
 
         <h2 className="text-xl font-semibold text-center mb-4 text-gray-800">
-          Lets Connect!
+          Let's Connect!
         </h2>
         <p className="text-sm text-gray-600 text-center mb-6">
           Enter your name and number so we can assist you better.
