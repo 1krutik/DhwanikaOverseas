@@ -26,7 +26,7 @@ const Home = () => {
         <a target="_blank" href="http://wa.me/+916359891313">
           <img
             className="w-[50px] h-[50px] fixed bottom-4 right-4 z-50 bg-white border rounded-lg shadow p-2"
-            src="./public/whatsapp.png"
+            src="./logos/whatsapp.png"
             alt=""
           />
         </a>
