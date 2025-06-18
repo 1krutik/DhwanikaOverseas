@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header   data-aos="fade-up" className="bg-black shadow ">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="text-2xl font-bold text-red-600"><img className='w-[70px] h-[70px] rounded-full' src="/public/logo1.jpg" alt="" /></Link>
+        <Link to="/" className="text-2xl font-bold text-red-600"><img className='w-[70px] h-[70px] rounded-full' src="/public/dhwanika.jpg" alt="" /></Link>
 
         <div className="md:hidden">
           <button
