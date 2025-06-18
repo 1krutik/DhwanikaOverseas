@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Banner from '../components/Banner/Banner';
 import SearchBar from '../components/SearchBar';
 import Carousel from '../components/Carousel';
 import PopupForm from '../components/PopupForm'; // Add this line
+import TravelCards from './TravelCards';
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -19,7 +19,7 @@ const Home = () => {
       <Navbar />
       <SearchBar />
       <Carousel />
-      <Banner />
+      
 
       {/* WhatsApp Icon */}
       <div>
@@ -34,7 +34,7 @@ const Home = () => {
 
       {/* PopupForm Component */}
       <PopupForm show={showPopup} onClose={() => setShowPopup(false)} />
-
+<TravelCards/>
       <Footer />
     </div>
   );
