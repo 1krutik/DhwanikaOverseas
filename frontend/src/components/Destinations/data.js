@@ -20,7 +20,7 @@ const destinations = [
     name: "Dubai",
     country: "UAE",
     price: "₹60,000",
-    image: "/images/Bali.jpg",
+    image: "/images/dubai.jpg",
     duration: "4 Nights / 5 Days",
     description: "Modern city with desert safaris, shopping, and adventure.",
   },

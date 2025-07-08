@@ -35,6 +35,7 @@ const Home = () => {
       {/* PopupForm Component */}
       <PopupForm show={showPopup} onClose={() => setShowPopup(false)} />
 <TravelCards/>
+
       <Footer />
     </div>
   );

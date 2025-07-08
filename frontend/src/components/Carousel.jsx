@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const images = [
   '/slider/slider1.jpg',
@@ -6,13 +6,11 @@ const images = [
   '/slider/slider3.jpg',
   '/slider/slider4.jpg',
   '/slider/slider5.jpg',
-  
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -30,9 +28,8 @@ const Carousel = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div id="default-carousel"  data-aos="fade-up" className="relative w-full">
-      {/* Slider container */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div id="default-carousel" data-aos="fade-up" className="relative w-full">
+      <div className="relative h-80 md:h-96 overflow-hidden rounded-lg">
         {images.map((img, index) => (
           <div
             key={index}
@@ -49,7 +46,6 @@ const Carousel = () => {
         ))}
       </div>
 
-      {/* Indicators */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
         {images.map((_, index) => (
           <button
@@ -64,7 +60,6 @@ const Carousel = () => {
         ))}
       </div>
 
-      {/* Controls */}
       <button
         onClick={prevSlide}
         type="button"

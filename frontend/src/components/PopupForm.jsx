@@ -21,6 +21,7 @@ const handleSubmit = async (e) => {
       onClose();
     } else {
       alert("❌ Submission failed.");
+      console.log(res);
     }
   } catch (error) {
     console.error("Submission error:", error);
