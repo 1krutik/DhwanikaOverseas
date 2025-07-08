@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     });
 
     if (res.ok) {
-      alert("✅ Submitted successfully!");
+      alert("✅ Submitted successfully ! We'll get back to you soon.");
       onClose();
     } else {
       alert("❌ Submission failed.");
